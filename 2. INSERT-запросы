@@ -106,10 +106,13 @@ INSERT INTO trackscollections
 values (4, 1);
 
 -- изменения для соответствия заданию
-update album
-set releasealbum = 2018
-where albumid = 1;
+UPDATE album
+SET releasealbum = 2018
+WHERE albumid = 1;
 
-update album
-set releasealbum = 2020
-where albumid = 2;
+UPDATE album
+SET releasealbum = 2020
+WHERE albumid = 2;
+
+INSERT INTO musiciansalbums  
+values (1, 5);
