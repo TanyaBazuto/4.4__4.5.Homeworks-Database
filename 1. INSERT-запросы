@@ -1,0 +1,106 @@
+INSERT INTO MusicalGenre
+values (1, 'Инди');
+
+INSERT INTO MusicalGenre
+values (2, 'Электроника');
+
+INSERT INTO MusicalGenre
+values (3, 'Музыка мира');
+
+INSERT INTO Musician
+values (1, 'Rhiannon Giddens');
+
+INSERT INTO Musician
+values (2, 'Mumford & Sons');
+
+INSERT INTO Musician
+values (3, 'Thunder Monk');
+
+INSERT INTO Musician
+values (4, 'VodKe');
+
+INSERT INTO Musician
+values (5, 'Blackstop');
+
+INSERT INTO musiciansgenres
+values (1, 1);
+
+INSERT INTO musiciansgenres
+values (1, 2);
+
+INSERT INTO musiciansgenres
+values (2, 3);
+
+INSERT INTO musiciansgenres
+values (2, 4);
+
+INSERT INTO musiciansgenres
+values (3, 5);
+
+INSERT INTO album 
+values (1, 'Freedom Highway', 2017);
+
+INSERT INTO album 
+values (2, 'Battleground', 2023);
+
+INSERT INTO album 
+values (3, 'Tension', 2023);
+
+INSERT INTO musiciansalbums  
+values (1, 1);
+
+INSERT INTO musiciansalbums  
+values (2, 3);
+
+INSERT INTO musiciansalbums  
+values (3, 4);
+
+INSERT INTO collection 
+values (1, 'International Geographic', 2021);
+
+INSERT INTO collection 
+values (2, 'Woo', 2022);
+
+INSERT INTO collection 
+values (3, 'Миротворец', 2019);
+
+INSERT INTO collection 
+values (4, 'We Could Fly', 2017);
+
+INSERT INTO track  
+values (1, 1, 'We Could Fly', 292);
+
+INSERT INTO track  
+values (2, 1, 'Better Get It Right the First Time', 203);
+
+INSERT INTO track  
+values (3, 2, 'Soul of the My Sword', 118);
+
+INSERT INTO track  
+values (4, 3, 'Hold My Hand', 193);
+
+INSERT INTO track  
+values (5, 2, 'Yamaneko', 128);
+
+INSERT INTO track  
+values (6, 3, 'Butler', 256);
+
+INSERT INTO trackscollections  
+values (1, 4);
+
+INSERT INTO trackscollections  
+values (2, 2);
+
+INSERT INTO trackscollections  
+values (3, 3);
+
+INSERT INTO trackscollections  
+values (4, 1);
+
+update album
+set releasealbum = 2018
+where albumid = 1;
+
+update album
+set releasealbum = 2020
+where albumid = 2;
