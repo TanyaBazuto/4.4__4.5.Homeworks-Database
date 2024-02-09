@@ -63,3 +63,24 @@ LEFT JOIN album a ON t.albumid = a.albumid
 LEFT JOIN musiciansalbums ma ON ma.albumid = a.albumid 
 LEFT JOIN musician m ON m.musicianid = ma.musicianid
 WHERE LOWER(m.namemusician) LIKE 'thunder monk';
+
+
+-- Задание 4
+-- названия альбомов, в которых присутствуют исполнители более чем одного жанра.
+--
+
+-- наименования треков, которые не входят в сборники.
+SELECT t.nametrack FROM track t
+	LEFT JOIN  trackscollections tc ON t.trackid = tc.trackid
+	WHERE tc.trackid ISNULL;
+
+-- Исполнитель или исполнители, написавшие самый короткий по продолжительности трек, — теоретически таких треков может быть несколько.
+SELECT m.namemusician FROM musician m
+	JOIN musiciansalbums ma ON m.musicianid = ma.musicianid
+	JOIN album a ON a.albumid = ma.albumid
+	JOIN track t ON t.albumid = a.albumid
+	WHERE lengthtrack = (SELECT MIN(lengthtrack) FROM track);
+
+-- Названия альбомов, содержащих наименьшее количество треков.
+--
+
