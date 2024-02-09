@@ -1,3 +1,4 @@
+-- добавление названий жанров
 INSERT INTO MusicalGenre
 values (1, 'Инди');
 
@@ -7,6 +8,7 @@ values (2, 'Электроника');
 INSERT INTO MusicalGenre
 values (3, 'Музыка мира');
 
+-- добавление исполнителей
 INSERT INTO Musician
 values (1, 'Rhiannon Giddens');
 
@@ -22,6 +24,7 @@ values (4, 'VodKe');
 INSERT INTO Musician
 values (5, 'Blackstop');
 
+-- связь жанров и исполнителей
 INSERT INTO musiciansgenres
 values (1, 1);
 
@@ -37,6 +40,7 @@ values (2, 4);
 INSERT INTO musiciansgenres
 values (3, 5);
 
+-- добавление альбомов
 INSERT INTO album 
 values (1, 'Freedom Highway', 2017);
 
@@ -46,6 +50,7 @@ values (2, 'Battleground', 2023);
 INSERT INTO album 
 values (3, 'Tension', 2023);
 
+-- связь альбомов и исполнителей
 INSERT INTO musiciansalbums  
 values (1, 1);
 
@@ -55,6 +60,7 @@ values (2, 3);
 INSERT INTO musiciansalbums  
 values (3, 4);
 
+-- добавление сборников
 INSERT INTO collection 
 values (1, 'International Geographic', 2021);
 
@@ -67,6 +73,7 @@ values (3, 'Миротворец', 2019);
 INSERT INTO collection 
 values (4, 'We Could Fly', 2017);
 
+-- добавление треков
 INSERT INTO track  
 values (1, 1, 'We Could Fly', 292);
 
@@ -85,6 +92,7 @@ values (5, 2, 'Yamaneko', 128);
 INSERT INTO track  
 values (6, 3, 'Butler', 256);
 
+-- связь треков и сборников
 INSERT INTO trackscollections  
 values (1, 4);
 
@@ -97,6 +105,7 @@ values (3, 3);
 INSERT INTO trackscollections  
 values (4, 1);
 
+-- изменения для соответствия заданию
 update album
 set releasealbum = 2018
 where albumid = 1;
